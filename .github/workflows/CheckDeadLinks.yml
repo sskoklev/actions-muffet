@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Check links using script
         env:
-          INPUT_URL: https://github.com/sskoklev/Muffet-Test
-          INPUT_PAGES_PATH: ""
+          url: https://my-testing-domain.com
+          pages_path: ./public/
           INPUT_CMD_PARAMS: "--skip-tls-verification --verbose"
           INPUT_RUN_TIMEOUT: 100
           INPUT_DEBUG: true
