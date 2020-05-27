@@ -13,7 +13,7 @@ jobs:
         uses: sskoklev/action-my-broken-link-checker@v1
         with:
           url: https://my-testing-domain.com
-          pages_path: ./public/
+          pages_path: ""
           cmd_params: "--skip-tls-verification --verbose"
           run_timeout: 10
           debug: true
