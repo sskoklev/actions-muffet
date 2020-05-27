@@ -12,7 +12,7 @@ jobs:
       - name: Check links using container
         uses: sskoklev/action-my-broken-link-checker@v1
         with:
-          url: https://my-testing-domain.com
+          url: https://www.deadlinkchecker.com/
           pages_path: ""
           cmd_params: "--skip-tls-verification --verbose"
           run_timeout: 10
