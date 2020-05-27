@@ -12,7 +12,7 @@ jobs:
       - name: Check links using script
         env:
           url: https://my-testing-domain.com
-          pages_path: ./public/
+          pages_path: ""
           INPUT_CMD_PARAMS: "--skip-tls-verification --verbose"
           INPUT_RUN_TIMEOUT: 100
           INPUT_DEBUG: true
