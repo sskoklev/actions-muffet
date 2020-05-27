@@ -16,4 +16,4 @@ jobs:
           pages_path: ""
           cmd_params: "--skip-tls-verification"
           run_timeout: 100
-          debug: false
+          debug: true
