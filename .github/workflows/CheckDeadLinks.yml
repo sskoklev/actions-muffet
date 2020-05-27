@@ -9,11 +9,11 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check links using container
-        uses: sskoklev/action-my-broken-link-checker@v1
-        with:
-          url: https://github.com/sskoklev/Muffet-Test
-          pages_path: ""
-          cmd_params: "--skip-tls-verification --verbose"
-          run_timeout: 10
-          debug: true
+      - name: Check links using script
+        env:
+          INPUT_URL: https://my-testing-domain.com
+          INPUT_PAGES_PATH: .""
+          INPUT_CMD_PARAMS: "--skip-tls-verification --verbose"
+          INPUT_RUN_TIMEOUT: 100
+          INPUT_DEBUG: true
+        run: wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v1/entrypoint.sh | bash
