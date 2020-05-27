@@ -1,0 +1,19 @@
+name: Checks
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check links using container
+        uses: sskoklev/action-my-broken-link-checker@v1
+        with:
+          url: https://my-testing-domain.com
+          pages_path: ./public/
+          cmd_params: "--skip-tls-verification --verbose"
+          run_timeout: 10
+          debug: true
