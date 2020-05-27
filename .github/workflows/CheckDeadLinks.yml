@@ -15,5 +15,5 @@ jobs:
           url: https://github.com/sskoklev/Muffet-Test
           pages_path: ""
           cmd_params: "--skip-tls-verification"
-          run_timeout: 100
+          run_timeout: 10
           debug: true
